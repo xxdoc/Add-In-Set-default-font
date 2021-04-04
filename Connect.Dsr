@@ -7,8 +7,8 @@ Begin {AC0714F6-3D04-11D1-AE7D-00A0C90F26F4} Connect
    _ExtentX        =   11621
    _ExtentY        =   17547
    _Version        =   393216
-   Description     =   "Se usa para cambiar un tipo de control por otro"
-   DisplayName     =   "Project Examiner"
+   Description     =   "Chnage the deault font for Forms, UserControls, Etc."
+   DisplayName     =   "Set default font"
    AppName         =   "Visual Basic"
    AppVer          =   "Visual Basic 98 (ver 6.0)"
    LoadName        =   "Command Line / Startup"
