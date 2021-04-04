@@ -14,7 +14,7 @@ End Function
 
 Public Sub ChangeComponentFont(nComponent As VBComponent, Optional nReload As Boolean)
     If (nComponent.Type = vbext_ct_VBForm) Or (nComponent.Type = vbext_ct_UserControl) Or (nComponent.Type = vbext_ct_VBMDIForm) Or (nComponent.Type = vbext_ct_PropPage) Then
-        If nComponent.Designer.VBControls.Count = 0 Then
+        If (nComponent.Designer.VBControls.Count = 0) And (nComponent.FileNames(1) = "") Then
             Dim iProp As Property
             Dim p As Long
             Dim iObj As Object
@@ -22,7 +22,7 @@ Public Sub ChangeComponentFont(nComponent As VBComponent, Optional nReload As Bo
             Const cOrigFontSize As Long = 8
             
             Set iProp = Nothing
-            For p = 1 To nComponent.Properties.Count ' Bug in the Add-In environment, For Each here crashes VB with UserControls when the Add-In is compiled
+            For p = 1 To nComponent.Properties.Count
                 Set iProp = nComponent.Properties(p)
                 If iProp.Name = "Font" Then
                     Set iObj = Nothing
