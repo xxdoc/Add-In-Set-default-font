@@ -3,8 +3,8 @@ Begin VB.Form frmMain
    BorderStyle     =   3  'Fixed Dialog
    Caption         =   "Config default font"
    ClientHeight    =   2100
-   ClientLeft      =   4332
-   ClientTop       =   2124
+   ClientLeft      =   13092
+   ClientTop       =   1848
    ClientWidth     =   4908
    BeginProperty Font 
       Name            =   "Segoe UI"
@@ -162,7 +162,7 @@ Private Sub Form_Load()
     
     chkEnabled.Value = Abs(CLng(gChangeDefaultFontEnabled))
     
-    Me.Move GetSetting(App.Title, "Settings", "WindowLeft", Screen.Width * 0.7 - Me.Width), GetSetting(App.Title, "Settings", "WindowTop", 0), GetSetting(App.Title, "Settings", "WindowWidth", Me.Width), GetSetting(App.Title, "Settings", "WindowHeight", Me.Height)
+    Me.Move GetSetting(App.Title, "Settings", "WindowLeft", Screen.Width * 0.7 - Me.Width), GetSetting(App.Title, "Settings", "WindowTop", 1300), GetSetting(App.Title, "Settings", "WindowWidth", Me.Width), GetSetting(App.Title, "Settings", "WindowHeight", Me.Height)
     
     mLoading = False
 End Sub
